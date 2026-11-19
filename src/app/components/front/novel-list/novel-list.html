@@ -1,0 +1,19 @@
+<h2>Nos romans</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Titre</th>
+      <th>Infos</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (novel of novels(); track novel.id) {
+      <tr>
+        <td>{{ novel.id }}</td>
+        <td>{{ novel.title }}</td>
+        <td><button class="btn btn-info" [routerLink]="['/allBooks/novels', novel.id]">Infos</button></td>
+      </tr>
+    }
+  </tbody>
+</table>
